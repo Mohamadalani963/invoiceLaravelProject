@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Notification;
 use App\Exports\InvoicesExport;
 use App\Mail\TestMail;
-use App\Models\invoice_attachment;
+use App\Models\invoiceAttachment;
 use App\Models\invoice_details;
 use App\Models\invoices;
 use App\Models\sections;
@@ -83,22 +83,9 @@ class InvoicesController extends Controller
             'user' => (Auth::user()->name),
         ]);
         if ($request->hasFile('pic')) {
+            $attch = new InvoiceAttachmentController();
+            $attch->store($request);
 
-            $invoice_id = Invoices::latest()->first()->id;
-            $image = $request->file('pic');
-            $file_name = $image->getClientOriginalName();
-            $invoice_number = $request->invoice_number;
-
-            $attachments = new invoice_attachment();
-            $attachments->file_name = $file_name;
-            $attachments->invoice_number = $invoice_number;
-            $attachments->Created_by = Auth::user()->name;
-            $attachments->invoice_id = $invoice_id;
-            $attachments->save();
-
-            // move pic
-            $imageName = $request->pic->getClientOriginalName();
-            $request->pic->move(public_path('Attachments/' . $invoice_number), $imageName);
         }
         $user = User::find(Auth::user()->id);
         $invoices = invoices::latest()->first();
@@ -225,7 +212,7 @@ class InvoicesController extends Controller
     {
         $id = $request->invoice_id;
         $invoices = invoices::where('id', $id)->first();
-        $Details = invoice_attachment::where('invoice_id', $id)->first();
+        $Details = invoiceAttachment::where('invoice_id', $id)->first();
 
         $id_page =$request->id_page;
 

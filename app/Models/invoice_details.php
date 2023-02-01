@@ -13,4 +13,5 @@ class invoice_details extends Model
     {
         return $this->belongsTo(invoices::class);
     }
+
 }

@@ -16,4 +16,9 @@ class invoices extends Model
     {
         return $this->belongsTo(sections::class);
     }
+    public function invoiceAttachment()
+    {
+        return $this->hasMany(invoiceAttachment::class);
+    }
+
 }

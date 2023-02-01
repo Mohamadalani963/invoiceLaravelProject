@@ -9,5 +9,8 @@ class sections extends Model
 {
     use HasFactory;
     protected $fillable = ['section_name','description','Created_by'];
-
+    public function products()
+    {
+        return $this->hasMany(products::class);
+    }
 }

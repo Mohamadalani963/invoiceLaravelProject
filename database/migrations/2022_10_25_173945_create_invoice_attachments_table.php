@@ -18,8 +18,8 @@ return new class extends Migration
                 $table->id();
                 $table->string('file_name', 999);
                 $table->string('invoice_number', 50);
-                $table->string('Created_by', 999);
-                $table->bigInteger('invoice_id')->nullable()->unique();
+                $table->string('CreatedBy');
+                $table->unsignedBigInteger('invoice_id')->nullable()->references('id')->on('invoices');
                 $table->timestamps();
             });
         }

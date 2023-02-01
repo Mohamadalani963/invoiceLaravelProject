@@ -19,7 +19,8 @@ return new class extends Migration
 
                 $table->id();
                 $table->string('invoice_number', 50);
-                $table->biginteger('invoice_id')->nullable()->unique();
+                $table->unsignedBigInteger('invoice_id')->nullable()->refernces('id')->on('invoices');
+//                $table->foreignId('invoice_id')->nullable()->constrained('users');
                 $table->string('product', 50);
                 $table->string('Section', 999);
                 $table->string('Status', 50);
