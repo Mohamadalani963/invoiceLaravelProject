@@ -1,18 +1,97 @@
-[Capture](https://user-images.githubusercontent.com/63389894/206852304-fcd4b603-1704-4d2a-85ed-121b03a8e828.JPG)
+# Invoice Management System
 
-# Invoice mangment project using Laravel framework
+This is a Laravel project for managing invoices, users, roles, and permissions. The features of the project include:
 
-a laravel project to mange invocies in a store which have a different sections and products.
-<br>
+- Creating new users
+- User role and permission management
+- Adding invoices
+- Archiving invoices
+- Deleting invoices
+- Adding sections
+- Adding products
 
-## features in this project:
+## Getting Started
 
-- having the ability of making different operations on invoices like insert an invoice, remove invoice, edit invoice, archive invoice and change the status of an invoice (paid to unpaid)
-- add differnet types users. 
-- having the ability to make a new type of users by selecting or unselecting roles from the roles list.
-- having the ability to add a new sections and a new products and link each product with the right section
-- having a notification section which shows a new Notification every time someone add an invoice
+To use the Invoice Management System, follow these steps:
 
-## The design of database:
+1. Download the latest release from the [GitHub repository](https://github.com/your-username/invoice-management-system).
+2. Extract the files to your web server's document root directory.
+3. Run the following commands in the project directory to set up the database and install the dependencies:
 
-[databaseDesign (1)](https://user-images.githubusercontent.com/63389894/206854747-41154142-a2d5-469c-ac08-3f7f73578abc.svg)
+```
+cp .env.example .env
+```
+```
+php artisan key:generate
+```
+```
+php artisan migrate
+```
+```
+composer install
+```
+
+
+4. Edit the `.env` file to set up your database connection and other settings.
+5. Use the `php artisan serve` command to start the development server, and visit the URL `http://localhost:8000` in your web browser to see the project.
+
+## Features
+
+The Invoice Management System has the following features:
+
+### User Management
+
+- User registration
+- User login and logout
+- User profile editing
+- User password reset
+
+### Role and Permission Management
+
+- Role creation and editing
+- Permission creation and editing
+- Assigning roles and permissions to users
+
+### Invoice Management
+
+- Creating new invoices
+- Viewing invoice details
+- Archiving invoices
+- Deleting invoices
+
+### Section Management
+
+- Adding new sections
+- Editing section details
+- Deleting sections
+
+### Product Management
+
+- Adding new products
+- Editing product details
+- Deleting products
+
+## Usage
+
+To create a new user, follow these steps:
+
+1. Visit the URL `http://localhost:8000/register` in your web browser.
+2. Fill out the registration form and submit it.
+3. The new user will be added to the database and redirected to the login page.
+
+## Contributing
+
+If you find any bugs or have feature requests, please submit them as [issues](https://github.com/your-username/invoice-management-system/issues) on GitHub. You can also contribute to the project by submitting pull requests with bug fixes or new features.
+
+
+## Contact
+
+If you have any questions or feedback, you can contact me at my [email address](mailto:mohamadalani963@gmail.com).
+
+## Credits
+
+The Invoice Management System uses the following third-party packages:
+
+- [Laravel](https://laravel.com/) for the PHP framework
+- [Bootstrap](https://getbootstrap.com/) for the CSS framework
+- [jQuery](https://jquery.com/) for JavaScript functionality.
