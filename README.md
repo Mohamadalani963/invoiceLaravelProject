@@ -74,10 +74,26 @@ The Invoice Management System has the following features:
 ## Usage
 
 To create a new user, follow these steps:
+1. run the following seeders
+```
+php artisan db:seed --class=CreateAdminUserSeeder
+php artisan db:seed --class=CreateUserSeeder
 
-1. Visit the URL `http://localhost:8000/register` in your web browser.
-2. Fill out the registration form and submit it.
-3. The new user will be added to the database and redirected to the login page.
+```
+
+2. Visit the URL `http://localhost:8000` in your web browser.
+3. you can sign in as a user with the following credentials:
+```
+    username:tester
+    email:tester@gmail.com
+    password:123456789
+```
+4. you can sign in as a user with the following credentials:
+```
+    username:admin
+    email:testerAdmin@yahoo.com
+    password:admin123456
+```
 
 ## Contributing
 
