@@ -14,7 +14,7 @@ This is a Laravel project for managing invoices, users, roles, and permissions. 
 
 To use the Invoice Management System, follow these steps:
 
-1. Download the latest release from the [GitHub repository](https://github.com/your-username/invoice-management-system).
+1. Download the latest release from the [GitHub repository](https://github.com/Mohamadalani963/invoiceLaravelProject).
 2. Extract the files to your web server's document root directory.
 3. Run the following commands in the project directory to set up the database and install the dependencies:
 
