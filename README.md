@@ -88,7 +88,7 @@ php artisan db:seed --class=CreateUserSeeder
     email:tester@gmail.com
     password:123456789
 ```
-4. you can sign in as a user with the following credentials:
+4. you can sign in as an admin with the following credentials:
 ```
     username:admin
     email:testerAdmin@yahoo.com
